@@ -1,12 +1,26 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import PriceCart from "../PriceCart/PriceCart";
 
 const PriceList = () => {
-    return (
-        <div>
-            <h1>this is price list</h1>
-        </div>
-    );
+  const [prices, setPrices] = useState([]);
+
+  useEffect(() => {
+    fetch("prices.json")
+      .then((res) => res.json())
+      .then((data) => setPrices(data));
+  }, []);
+
+  return (
+    <div>
+      <h1 className="text-center bg-fuchsia-700 mt-3 p-3  font-bold text-white text-2xl">Here is all price list</h1>
+      <div className="grid grid-cols-3 gap-3 mt-4 text-center">
+        {prices?.map((price) => (
+          <PriceCart key={price.id} price={price}></PriceCart>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default PriceList;
