@@ -2,19 +2,19 @@
     {
       "id": 1,
       "name": "Basic",
-      "price": 29.99,
+      "price": 29,
       "features": ["Cardio access", "Standard equipment", "Locker room"]
     },
     {
       "id": 2,
       "name": "Premium",
-      "price": 49.99,
+      "price": 49,
       "features": ["Full gym access", "Group classes", "Personal trainer"]
     },
     {
       "id": 3,
       "name": "VIP",
-      "price": 79.99,
+      "price": 79,
       "features": ["24/7 access", "Exclusive lounge", "Towel service"]
     }
   ]
