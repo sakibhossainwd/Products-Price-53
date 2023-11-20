@@ -3,7 +3,7 @@ import React from "react";
 import Features from "../Features/Features";
 
 const PriceCart = ({ price }) => {
-  console.log(price);
+//   console.log(price);
   return (
     <div className="bg-indigo-200 rounded-md p-5">
       <h2 className="text-center">
@@ -22,7 +22,7 @@ const PriceCart = ({ price }) => {
         feature={feature}
         ></Features>
       ))}
-      <button className="w-full bg-indigo-700 text-white py-2 rounded-md mt-5">Buy Now</button>
+      <button className="w-full bg-indigo-700 text-white py-2 rounded-md mt-5 hover:bg-indigo-600">Buy Now</button>
     </div>
   );
 };
